@@ -37,6 +37,7 @@ lvm_lv_create_{{ lv }}:
     - vgname: {{ lvdata['vgname'] }}
     {{ '- devices: ' ~ lvdata['devices'] if 'devices' in lvdata else '' }}
     {{ '- size: ' ~ lvdata['size'] if 'size' in lvdata else '' }}
+    {{ '- extents: ' ~ lvdata['extents'] if 'extents' in lvdata else '' }}
     {{ '- pv: ' ~ lvdata['pv'] if 'pv' in lvdata else '' }}
     {{ '- force: ' ~ lvdata['force'] if 'force' in lvdata else '' }}
     {{ '- thinvolume: ' ~ lvdata['thinvolume'] if 'thinvolume' in lvdata else '' }}
